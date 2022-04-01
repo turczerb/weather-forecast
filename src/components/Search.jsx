@@ -32,36 +32,46 @@ const Search = (props) => {
   };
 
   return (
-    <div className="bckgr-img-cont">
+    <div>
       <div>
         <main>
           <input
             className="search"
             type="text"
-            placeholder="search"
+            placeholder="search..."
             onKeyPress={search}
             onKeyUp={picSearch}
             value={data}
             onChange={(e) => setData(e.target.value)}
           />
-          <div>
-            {typeof weather.location != "undefined" ? (
-              <div>
-                <div className="weather">
-                  <p>{weather.location.name}</p>
-                  <p>{weather.location.country}</p>
-                  <p>{weather.current.temp_c} C°</p>
-                  <p>Humidity {weather.current.humidity}</p>
-                  <p>{weather.current.condition.text}</p>
-                  <img src={weather.current.condition.icon} alt="Logo" />
-                  <p>Wind {weather.current.wind_kph} km/h</p>
-                  <p>UV {weather.current.uv}</p>
-                </div>
+
+          {typeof weather.location != "undefined" ? (
+            <div>
+              <div className="datas-cont">
+                <p className="lok" id="gird1">
+                  {weather.location.name}, {weather.location.country}
+                </p>
+                <p className="gird2">
+                  Local time: {weather.location.localtime}
+                </p>
+                <p className="temp" id="gird3">
+                  {weather.current.temp_c} C°
+                </p>
+                <p id="gird4">Humidity {weather.current.humidity} %</p>
+                <p id="gird5">{weather.current.condition.text}</p>
+                <img
+                  src={weather.current.condition.icon}
+                  alt="Logo"
+                  className="gird6"
+                />
+                <p id="gird7">Wind {weather.current.wind_kph} km/h</p>
+                <p id="gird8">Feels like {weather.current.feelslike_c} C°</p>
+                <div id="gird9"> UV {weather.current.uv}</div>
               </div>
-            ) : (
-              "City not found. Please try it again."
-            )}
-          </div>
+            </div>
+          ) : (
+            "City not found. Please try it again."
+          )}
         </main>
       </div>
     </div>
