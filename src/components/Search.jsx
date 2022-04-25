@@ -46,7 +46,7 @@ const Search = (props) => {
           />
 
           {typeof weather.location != "undefined" ? (
-            <div>
+            <div className="conti">
               <div className="datas-cont">
                 <p className="lok" id="gird1">
                   {weather.location.name}, {weather.location.country}
@@ -70,7 +70,7 @@ const Search = (props) => {
               </div>
             </div>
           ) : (
-            "City not found. Please try it again."
+            <p>City not found. Please try it again.</p>
           )}
         </main>
       </div>
