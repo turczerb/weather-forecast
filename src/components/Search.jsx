@@ -62,11 +62,11 @@ const Search = (props) => {
                 <img
                   src={weather.current.condition.icon}
                   alt="Logo"
-                  className="gird6"
+                  id="gird6"
                 />
                 <p id="gird7">Wind {weather.current.wind_kph} km/h</p>
                 <p id="gird8">Feels like {weather.current.feelslike_c} C°</p>
-                <div id="gird9"> UV {weather.current.uv}</div>
+                <p id="gird9"> UV {weather.current.uv}</p>
               </div>
             </div>
           ) : (

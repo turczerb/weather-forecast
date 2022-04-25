@@ -21,13 +21,22 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   margin: 200px;
-  text-align: center;
+
   max-width: auto;
   border: 2px wheat solid;
   padding-top: 50px;
   border-radius: 16px;
   box-shadow: 5px 8px wheat;
   align-content: center;
+}
+
+.datas-cont > p,
+img {
+  margin-top: 16px;
+  align-items: center;
+}
+
+.datas-cont > img {
 }
 
 @media screen and (max-width: 600px) {
