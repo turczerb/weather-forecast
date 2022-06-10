@@ -15,7 +15,7 @@ const Forecast = (props) => {
 
   return typeof props.tdForecast.forecast != "undefined" ? (
     <div>
-      <div>
+      <div className="forecast_container">
         {props.tdForecast.forecast.forecastday.map((item, index) => {
           return (
             <main key={index} className="forecast">
